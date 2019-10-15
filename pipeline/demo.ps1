@@ -9,4 +9,4 @@ Connect-AzureRmAccount -Credential $cred -TenantId $tenantID -ServicePrincipal
 $resourceGroupName = "RogersPOC";
 $dataFactoryName = "RogersDFPOC";
 
-Set-AzureRmDataFactoryV2Pipeline -DataFactoryName 'RogersDFPOC' Copy -ResourcegroupName RogersPOC -DefinitionFile "./_AartiJaiswal_RogersDFPOC/pipeline/Copy.json"
+Set-AzureRmDataFactoryV2Pipeline -DataFactoryName 'RogersDFPOC' Copy -ResourcegroupName RogersPOC -DefinitionFile " D:\a\r1\a\_AartiJaiswal_RogersDFPOC/Copy.json"

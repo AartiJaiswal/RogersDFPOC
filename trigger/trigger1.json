@@ -1,0 +1,17 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/arogersdemo/blobs/",
+			"scope": "/subscriptions/ad47c102-517d-45c5-b0c3-6c02eafc7189/resourceGroups/TCSeZcloud/providers/Microsoft.Storage/storageAccounts/rogersdftesting",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}

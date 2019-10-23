@@ -10,7 +10,7 @@ $resourceGroupName = "RogersPOC";
 $dataFactoryName = "RogersDFPOC";
 
 
-$files = Get-ChildItem D:\r1\a\_AartiJaiswal_RogersDFPOC\pipeline\*.json
+$files = Get-ChildItem $(System.DefaultWorkingDirectory)\_AartiJaiswal_RogersDFPOC\pipeline\*.json
 foreach ($file in $files)
 {
  $outputFile = Split-Path $file -leaf

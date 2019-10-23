@@ -9,8 +9,8 @@ Connect-AzAccount -Credential $cred -TenantId $tenantID -ServicePrincipal
 $resourceGroupName = "RogersPOC";
 $dataFactoryName = "RogersDFPOC";
 
-$path = D:\r1\a\_AartiJaiswal_RogersDFPOC
-$files = Get-ChildItem $path\pipeline\*.json
+
+$files = Get-ChildItem D:\r1\a\_AartiJaiswal_RogersDFPOC\pipeline\*.json
 foreach ($file in $files)
 {
  $outputFile = Split-Path $file -leaf

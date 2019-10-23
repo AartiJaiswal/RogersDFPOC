@@ -9,8 +9,8 @@ Connect-AzAccount -Credential $cred -TenantId $tenantID -ServicePrincipal
 $resourceGroupName = "RogersPOC";
 $dataFactoryName = "RogersDFPOC";
 
-
-$files = Get-ChildItem D:\a\r1\a\_AartiJaiswal_RogersDFPOC\pipeline\*.json
+$path= D:\a\r1\a\_AartiJaiswal_RogersDFPOC\pipeline\*.json
+$files = Get-ChildItem $path
 foreach ($file in $files)
 {
  $outputFile = Split-Path $file -leaf
@@ -20,7 +20,7 @@ foreach ($file in $files)
 }
 
 
-$files = Get-ChildItem $(System.DefaultWorkingDirectory)\_AartiJaiswal_RogersDFPOC\dataset\*.json
+$files = Get-ChildItem D:\a\r1\a\_AartiJaiswal_RogersDFPOC\dataset\*.json
 foreach ($file in $files)
 {
  $outputFile = Split-Path $file -leaf
@@ -28,7 +28,7 @@ foreach ($file in $files)
  Set-AzDataFactoryV2Dataset -DataFactoryName $dataFactoryName $dataset -ResourcegroupName $resourceGroupName -DefinitionFile "$file"   -Force -Confirm:$false
  
 }
-$files = Get-ChildItem $(System.DefaultWorkingDirectory)\_AartiJaiswal_RogersDFPOC\linkedService\*.json
+$files = Get-ChildItem D:\a\r1\a\_AartiJaiswal_RogersDFPOC\linkedService\*.json
 foreach ($file in $files)
 {
  $outputFile = Split-Path $file -leaf
